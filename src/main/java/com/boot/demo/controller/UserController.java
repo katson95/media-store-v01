@@ -4,8 +4,6 @@ package com.boot.demo.controller;
 import com.boot.demo.entity.User;
 import com.boot.demo.exception.handler.EntityNotFoundException;
 import com.boot.demo.exception.handler.InvalidRequestException;
-import com.boot.demo.security.auth.JwtAuthenticationToken;
-import com.boot.demo.security.model.UserContext;
 import com.boot.demo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -72,11 +70,4 @@ public class UserController {
 		List<User> users = userService.findAll();
 		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
 	}
-
-	@RequestMapping(value="/api/me", method=RequestMethod.GET)
-	public @ResponseBody
-	UserContext get(JwtAuthenticationToken token) {
-		return (UserContext) token.getPrincipal();
-	}
-
 }
