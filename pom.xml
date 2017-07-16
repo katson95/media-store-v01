@@ -26,7 +26,7 @@
     </properties>
 
     <dependencies>
-        
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -73,7 +73,20 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
-
+<distributionManagement>
+    <!-- use the following if you're not using a snapshot version. -->
+    <repository>
+        <id>nexus</id>
+        <name>RepositoryProxy</name>
+        <url>http://localhost:18081/repository/maven-releases/</url>
+    </repository>
+    <!-- use the following if you ARE using a snapshot version. -->
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>RepositoryProxy</name>
+        <url>http://localhost:18081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 
     <build>
         <plugins>
