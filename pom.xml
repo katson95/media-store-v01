@@ -78,13 +78,13 @@
     <repository>
         <id>nexus</id>
         <name>RepositoryProxy</name>
-        <url>http://localhost:8081/repository/maven-releases/</url>
+        <url>http://nexus:18081/content/repositories/snapshots/</url>
     </repository>
     <!-- use the following if you ARE using a snapshot version. -->
     <snapshotRepository>
         <id>nexus</id>
         <name>RepositoryProxy</name>
-        <url>http://localhost:8081/repository/maven-snapshots/</url>
+        <url>http://nexus:18081/content/repositories/snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
 
