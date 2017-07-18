@@ -73,7 +73,20 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
-
+<distributionManagement>
+    <!-- use the following if you're not using a snapshot version. -->
+    <repository>
+        <id>nexus</id>
+        <name>RepositoryProxy</name>
+        <url>http://nexus:18081/content/repositories/snapshots/</url>
+    </repository>
+    <!-- use the following if you ARE using a snapshot version. -->
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>RepositoryProxy</name>
+        <url>http://nexus:18081/content/repositories/snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 
     <build>
         <plugins>
