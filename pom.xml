@@ -78,13 +78,13 @@
     <repository>
         <id>nexus</id>
         <name>RepositoryProxy</name>
-        <url>http://nexus:18081/content/repositories/snapshots/</url>
+        <url>http://localhost:18081/content/repositories/releases/</url>
     </repository>
     <!-- use the following if you ARE using a snapshot version. -->
     <snapshotRepository>
         <id>nexus</id>
         <name>RepositoryProxy</name>
-        <url>http://nexus:18081/content/repositories/snapshots/</url>
+        <url>http://localhost:18081/content/repositories/snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
 
